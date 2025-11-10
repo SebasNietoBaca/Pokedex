@@ -1,3 +1,8 @@
+Proyecto con fines educativos/practicos para desarrollar habilidades de frontend, usando react y la pokeapi
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
