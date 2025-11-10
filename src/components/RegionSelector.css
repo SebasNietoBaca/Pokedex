@@ -1,0 +1,162 @@
+.region-selector {
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.region-selector h3 {
+  color: white;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.region-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+/* Estilos base para los botones de región */
+.region-btn {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 15px 10px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.2); /* Fallback */
+}
+
+/* Degradados específicos para cada región/generación */
+
+/* Kanto - Gen 1 (Rojo/Azul) */
+.region-btn.region-kanto {
+  background: linear-gradient(135deg, #ff0000, #fbff00, #0026ff);
+}
+
+/* Johto - Gen 2 (Oro/Plata) */
+.region-btn.region-johto {
+  background: linear-gradient(135deg, #d4af37, #c0c0c0, #d4af37);
+}
+
+/* Hoenn - Gen 3 (Rubí/Zafiro) */
+.region-btn.region-hoenn {
+  background: linear-gradient(135deg, #0030c2, #00ff40, #f80000);
+}
+
+/* Sinnoh - Gen 4 (Diamante/Perla) */
+.region-btn.region-sinnoh {
+  background: linear-gradient(135deg, #b9f2ff, #e6e6fa, #b9f2ff);
+  color: #333;
+}
+
+/* Unova - Gen 5 (Negro/Blanco) */
+.region-btn.region-unova {
+  background: linear-gradient(135deg, #2c2c2c, #ffffff, #2c2c2c);
+  color: #333;
+}
+
+.region-btn.region-unova .region-gen,
+.region-btn.region-unova .region-count,
+.region-btn.region-unova .region-range {
+  color: #333;
+}
+
+/* Kalos - Gen 6 (X/Y) */
+.region-btn.region-kalos {
+  background: linear-gradient(135deg, #0000ff, #ff0000);
+}
+
+/* Alola - Gen 7 (Sol/Luna) */
+.region-btn.region-alola {
+  background: linear-gradient(135deg, #ff8c00, #1e90ff, #ff8c00);
+}
+
+/* Galar - Gen 8 (Espada/Escudo) */
+.region-btn.region-galar {
+  background: linear-gradient(135deg, #87ceeb, #d4af37, #87ceeb);
+}
+
+/* Hisui - Gen 8 (Leyendas) */
+.region-btn.region-hisui {
+  background: linear-gradient(135deg, #8b4513, #daa520, #8b4513);
+}
+
+/* Paldea - Gen 9 (Escarlata/Púrpura) */
+.region-btn.region-paldea {
+  background: linear-gradient(135deg, #ff2400, #9400d3);
+}
+
+/* Estados hover */
+.region-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  filter: brightness(1.1);
+}
+
+/* Estado activo */
+.region-btn.active {
+  border-color: #ffcc00;
+  box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.region-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.region-gen {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 3px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.region-count {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-bottom: 3px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.region-range {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  font-family: monospace;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Asegurar que el texto sea legible en regiones con fondos claros */
+.region-btn.region-sinnoh .region-name,
+.region-btn.region-sinnoh .region-gen,
+.region-btn.region-sinnoh .region-count,
+.region-btn.region-sinnoh .region-range,
+.region-btn.region-unova .region-name {
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+}
+
+@media (max-width: 768px) {
+  .region-buttons {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .region-name {
+    font-size: 1rem;
+  }
+  
+  .region-range {
+    font-size: 0.75rem;
+  }
+}
